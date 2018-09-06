@@ -1,4 +1,4 @@
-const {mongoose} = require('./db/mongoose');
+const {mongoose} = require('../db/mongoose');
 
 let User = mongoose.model('User',{
     email: {

@@ -1,8 +1,11 @@
-const {mongoose} = require('./db/mongoose');
+const {mongoose} = require('../db/mongoose');
 
 var Todo = mongoose.model('Todo', {
     text: {
-        type: String
+        type: String,
+        required: true,
+        minlength: 1,
+        trim: true
     },
     completed:{
         type: Boolean
